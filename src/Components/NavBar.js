@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
+  const navigate = useNavigate()
   const searchBar = localStorage.getItem("employeeProfiles");
   const results = JSON.parse(searchBar);
   const [searchEmployee, setSearchEmployee] = useState("");
@@ -11,8 +13,9 @@ function NavBar() {
         localStorage.setItem("searchBar", JSON.stringify([results[i]]));
       }
     }
-    window.location.reload();
+    //window.location.reload();
     console.log(searchEmployee);
+    navigate("/search")
   };
   return (
     <div className="navBar">
