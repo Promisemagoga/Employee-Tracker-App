@@ -1,6 +1,6 @@
 import { useState } from "react";
 import UpdateEmployee from "./updateEmployees";
-// import SearchedResult from "./SearchedResult";
+import SearchedResult from "./SearchedResult";
 
 function DisplayEmployee(props) {
   let stringifyEmployee = localStorage.getItem("employeeProfiles");
@@ -59,7 +59,7 @@ function DisplayEmployee(props) {
         </tbody>
       </table>
       {showForm && <UpdateEmployee />}
-      {/* <SearchedResult /> */}
+      <SearchedResult />
   
     </div>
   );
