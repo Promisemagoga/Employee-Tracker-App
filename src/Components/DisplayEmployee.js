@@ -21,7 +21,6 @@ function DisplayEmployee(props) {
 
   return (
     <div>
-    <div>
       <table className="displayInfo">
         <tbody>
           <tr>
@@ -60,8 +59,8 @@ function DisplayEmployee(props) {
         </tbody>
       </table>
       {showForm && <UpdateEmployee />}
-  </div>
-     <SearchedResult />
+      <SearchedResult />
+  
     </div>
   );
 }

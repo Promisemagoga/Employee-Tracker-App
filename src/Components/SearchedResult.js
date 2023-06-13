@@ -1,4 +1,4 @@
-function SearchedResult() {
+function SearchedResult(props) {
   const searchedEmployee = localStorage.getItem("searchBar");
   const searchEmployee = JSON.parse(searchedEmployee);
 
