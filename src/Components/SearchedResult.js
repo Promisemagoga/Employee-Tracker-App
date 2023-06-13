@@ -1,8 +1,12 @@
+import NavBar from "./NavBar";
+
 function SearchedResult(props) {
   const searchedEmployee = localStorage.getItem("searchBar");
   const searchEmployee = JSON.parse(searchedEmployee);
 
   return (
+    <div className="viewSearched">
+       <NavBar/>
     <div className="Card">
       <h1>Searched Employee</h1>
       {searchEmployee.map((data, index) => (
@@ -19,6 +23,7 @@ function SearchedResult(props) {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

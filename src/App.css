@@ -36,7 +36,7 @@
 
 .navBar h1 {
   font-family: "Comfortaa", cursive;
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 
 .form {
@@ -144,7 +144,6 @@ font-size: 2.5vw;
 
 
 .searchedCards{
-/* border: 5px solid #00dfa2; */
 background-color: #00dfa2;
 color: #ffffff;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -155,11 +154,20 @@ margin-top: 20px;
 padding: 10px;
 margin-bottom: 20px;
 display: flex;
+border-radius: 5px;
 }
 
 .searchedCards img{
 width: 80px;
 margin-left: auto;
+}
+
+.viewSearched input{
+  display: none;
+}
+
+.viewSearched .fa{
+  display: none;
 }
 
 
@@ -219,8 +227,14 @@ th, td{
 
 .searchedCards{
  
-  width: 60%;
+  width: 80%;
 
   }
+
+  .Card h1{
+    font-size: 5vw;
+    }
+
+  
 
 }
