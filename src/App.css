@@ -236,5 +236,8 @@ th, td{
     }
 
   
-
+    .searchedCards img{
+      width: 50px;
+      margin-left: auto;
+      }
 }
