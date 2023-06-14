@@ -1,6 +1,6 @@
 import NavBar from "./NavBar";
 
-function SearchedResult(props) {
+function SearchedResult() {
   const searchedEmployee = localStorage.getItem("searchBar");
   const searchEmployee = JSON.parse(searchedEmployee);
 
@@ -19,7 +19,7 @@ function SearchedResult(props) {
             <p>{data.employeePhoneNumber}</p>
             <h3>{data.employeePosition}</h3>
             </div>
-            <img src="./freelancer.png" />
+               <img id="preview" src={data.employeeImg} alt="employeePic" width={30}/>
           </div>
         </div>
       ))}

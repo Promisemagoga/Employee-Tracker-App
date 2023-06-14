@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function CreatForm(props) {
   const [employeeImg, setEmployeeImg] = useState("");
@@ -17,11 +17,26 @@ function CreatForm(props) {
       employeePosition,
       employeeImg
     );
-    
-    console.log(props.addEmployees);
-    window.location.reload();
+
+   window.location.reload();
   }
 
+  function handleImage(event){
+
+   
+      const image = event.target.files[0];
+
+      const reader = new FileReader();
+      reader.readAsDataURL(image);
+
+      reader.addEventListener('load', () => {
+       setEmployeeImg( reader.result);
+    console.log(reader.result)
+
+    });
+
+  }
+  
   return (
     <div>
       <div className="form">
@@ -39,7 +54,7 @@ function CreatForm(props) {
         <input
           type="email"
           placeholder="Email Adress"
-          onChange={(event) => setEmployeeEmail(event.target.value)} 
+          onChange={(event) => setEmployeeEmail(event.target.value)}
         />
         <input
           type="number"
@@ -53,7 +68,8 @@ function CreatForm(props) {
           <option>FrontEnd Developer</option>
           <option>BackEnd Developer</option>
         </select>
-        <input type="file" accept="img/*" onChange={(event) => setEmployeeImg(event.target.value)}/>
+        <input type="file" accept="img/*"  onChange={handleImage}/>
+
         <button onClick={Add}>Add Employee</button>
       </div>
     </div>

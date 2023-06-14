@@ -3,6 +3,7 @@ import UpdateEmployee from "./updateEmployees";
 // import SearchedResult from "./SearchedResult";
 
 function DisplayEmployee(props) {
+
   let stringifyEmployee = localStorage.getItem("employeeProfiles");
   let employees = JSON.parse(stringifyEmployee);
 
@@ -19,6 +20,7 @@ function DisplayEmployee(props) {
     setShowForm(!showForm);
   };
 
+  
   return (
     <div>
       <table className="displayInfo">
@@ -32,14 +34,14 @@ function DisplayEmployee(props) {
           </tr>
           {props.employeeProfiles.map((data, index) => (
             <tr key={index}>
-              <td>
-                <img src= {data.employeeImg} />
+              <td className="picSide">
+                <img id="preview" src={data.employeeImg} alt="employeePic" width={30}></img>
                 {data.employeeName}
               </td>
               <td>{data.employeeId}</td>
               <td>{data.employeeEmail}</td>
               <td>{data.employeePhoneNumber}</td>
-              <td className="position">
+              <td>
                 {data.employeePosition}
                 <div className="ud--buttons">
                   <i

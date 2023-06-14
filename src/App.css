@@ -99,16 +99,13 @@ tr:nth-child(odd) button{
   color: #ffffff;
 }
 
-.position {
-display: flex;
-align-items: center;
-}
+
 
 .ud--buttons{
-  margin-left: auto;
   display: flex;
   flex-direction: row;
-  column-gap: 20px;
+  column-gap: 20px; 
+  float: right;
 }
 
 .position img{
@@ -160,6 +157,7 @@ border-radius: 5px;
 .searchedCards img{
 width: 80px;
 margin-left: auto;
+border-radius: 10px;
 }
 
 .viewSearched input{
@@ -168,6 +166,17 @@ margin-left: auto;
 
 .viewSearched .fa{
   display: none;
+}
+
+.picSide{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.picSide img{
+  border-radius: 50%;
 }
 
 
