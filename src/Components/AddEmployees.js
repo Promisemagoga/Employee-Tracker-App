@@ -23,7 +23,6 @@ function CreatForm(props) {
 
   function handleImage(event){
 
-   
       const image = event.target.files[0];
 
       const reader = new FileReader();
