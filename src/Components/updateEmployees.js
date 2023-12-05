@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function UpdateEmployee() {
+function UpdateEmployee({ setShowForm }) {
   const updateEmployee = localStorage.getItem("employeeProfiles");
   let employeeProfile = JSON.parse(updateEmployee);
   const update = localStorage.getItem("employee");
@@ -8,7 +8,7 @@ function UpdateEmployee() {
 
 
   const [employeeIndex, setEmployeeIndex] = useState(0);
- 
+
   useEffect(() => {
     for (let i = 0; i < employeeProfile.length; i++) {
       if (upEmployee[0].employeeId === employeeProfile[i].employeeId) {
@@ -34,53 +34,69 @@ function UpdateEmployee() {
 
     localStorage.setItem("employeeProfiles", JSON.stringify(employeeProfile));
     console.log(employee);
-    console.log( employeeProfile);
+    console.log(employeeProfile);
+    alert("Details updatted successfully")
     window.location.reload();
   }
 
 
 
-  const handleChange=(e) =>setEmployee(prevState =>({...prevState, [e.target.name]:e.target.value}),
-  console.log(employee)
-  
+  const handleChange = (e) => setEmployee(prevState => ({ ...prevState, [e.target.name]: e.target.value }),
+    console.log(employee)
+
   )
 
+
+  function closeModal() {
+    setShowForm(false)
+  }
+
   return (
-    <div>
-      <div className="form">
+    <div className="formcontainer">
+      <div className="editForm">
+        <h1 style={{ marginLeft: "auto", color: "#00dfa2", paddingRight: "20px" }} onClick={closeModal}>X</h1>
+        <h2>Edit employee info</h2>
         <input
           type="text"
           name="name"
+          value={employee.name}
           placeholder="Name and Surname"
-           onChange={handleChange}
+          onChange={handleChange}
         />
         <input
           type="number"
           name="empID"
           placeholder="Id Number"
-           onChange={handleChange}
+          value={employee.empID}
+
+          onChange={handleChange}
         />
         <input
           type="email"
           name="empEmailAdress"
           placeholder="Email Address"
-           onChange={handleChange}
-          //   onKeyUp={event=>console.log(event)}
+          onChange={handleChange}
+          value={employee.empEmailAdress}
+
         />
         <input
           type="number"
           name="phoneNumber"
           placeholder="Phone Number"
-           onChange={handleChange}
+          value={employee.phoneNumber}
+
+          onChange={handleChange}
         />
         <input
           type="file"
           name="image"
-           onChange={handleChange}
+          onChange={handleChange}
         />
         <select
           name="position"
-           onChange={handleChange}
+          onChange={handleChange}
+          value={employee.position}
+
         >
           <option>Employee Position</option>
           <option>Project Manager</option>

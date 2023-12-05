@@ -19,7 +19,7 @@ function DisplayEmployee(props) {
     setShowForm(!showForm);
   };
 
-  
+
   return (
     <div>
       <table className="displayInfo">
@@ -30,6 +30,8 @@ function DisplayEmployee(props) {
             <th>Email Adress</th>
             <th>Phone Number</th>
             <th>Position</th>
+            <th>Actions</th>
+
           </tr>
           {props.employeeProfiles.map((data, index) => (
             <tr key={index}>
@@ -42,6 +44,8 @@ function DisplayEmployee(props) {
               <td>{data.employeePhoneNumber}</td>
               <td>
                 {data.employeePosition}
+              </td>
+              <td>
                 <div className="ud--buttons">
                   <i
                     className="fa fa-trash-o fa-lg"
@@ -59,8 +63,7 @@ function DisplayEmployee(props) {
           ))}
         </tbody>
       </table>
-      {showForm && <UpdateEmployee />}
-  
+      {showForm && <UpdateEmployee setShowForm={setShowForm} />}
     </div>
   );
 }

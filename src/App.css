@@ -13,7 +13,7 @@
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
-.navBar input{
+.navBar input {
   margin-left: auto;
   height: 30px;
   text-indent: 5px;
@@ -25,7 +25,7 @@
   width: 80px;
 }
 
-.navBar button{
+.navBar button {
   background-color: #ffffff;
   height: 30px;
   width: 50px;
@@ -40,12 +40,67 @@
 }
 
 .form {
-  margin-top: 80px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
   row-gap: 30px;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  row-gap: 30px;
+  background-color: whitesmoke;
+  width: 40%;
+  height: 80vh;
+}
+
+
+.editForm Input {
+  width: 90%;
+  height: 50px;
+  text-indent: 10px;
+  border-radius: 5px;
+}
+
+.editForm select {
+  width: 90%;
+  height: 50px;
+  text-indent: 10px;
+  border-radius: 5px;
+}
+
+.editForm button {
+  width: 300px;
+  height: 40px;
+  background-color: #00dfa2;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  z-index: 20px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100%;
 }
 
 .form img {
@@ -84,7 +139,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #1B9C85;
   text-align: left;
   padding: 8px;
@@ -94,26 +150,27 @@ tr:nth-child(even) {
   background-color: #00dfa2;
 }
 
-tr:nth-child(odd) button{
+tr:nth-child(odd) button {
   background-color: #00dfa2;
   color: #ffffff;
 }
 
 
 
-.ud--buttons{
+.ud--buttons {
   display: flex;
   flex-direction: row;
-  column-gap: 20px; 
-  float: right;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  color: azure;
 }
 
-.position img{
+.position img {
   margin-right: 10px;
   border-radius: 100%;
 }
 
-.position button{
+.position button {
   background-color: #ffffff;
   height: 30px;
   width: 50px;
@@ -122,60 +179,62 @@ tr:nth-child(odd) button{
   font-family: 'Times New Roman', Times, serif;
 }
 
-.displayInfo{
+.displayInfo {
   margin-top: 80px;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
 
-.Card h1{
-text-align: center;
-margin-top: 50px;
-font-family: "Comfortaa", cursive;
-font-size: 2.5vw;
+.Card h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Comfortaa", cursive;
+  font-size: 2.5vw;
 }
 
 
-.searchedCards{
-background-color: #00dfa2;
-color: #ffffff;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-width: 50%;
-margin-left: auto;
-margin-right: auto;
-margin-top: 20px;
-padding: 10px;
-margin-bottom: 20px;
-display: flex;
-border-radius: 5px;
+.searchedCards {
+  background-color: #00dfa2;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 5px;
 }
 
-.searchedCards img{
-width: 80px;
-margin-left: auto;
-border-radius: 10px;
+.searchedCards img {
+  width: 80px;
+  margin-left: auto;
+  border-radius: 10px;
 }
 
-.viewSearched input{
+.viewSearched input {
   display: none;
 }
 
-.viewSearched .fa{
+.viewSearched .fa {
   display: none;
 }
 
-.picSide{
+.picSide {
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 10px;
 }
 
-.picSide img{
+.picSide img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -183,28 +242,28 @@ border-radius: 10px;
 @media screen and (max-width:767px) {
   .form Input {
     width: 300px;
-   
-  }
-  
-  .form select {
-    width: 305px;
-  
+
   }
 
-  .form button{
+  .form select {
+    width: 305px;
+
+  }
+
+  .form button {
     width: 200px;
     border-radius: 10px;
   }
 
-  .displayInfo{
-    flex: 0 0 auto;         
-    display: flex;         
+  .displayInfo {
+    flex: 0 0 auto;
+    display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     position: relative;
   }
-  
+
   table {
     display: flex;
     flex-wrap: nowrap;
@@ -216,38 +275,51 @@ border-radius: 10px;
     width: 50px;
   }
 
-  
-.navBar input{
- width: 80px;
- height: 20px;
-}
 
-th, td{
-  font-size: 3vw;
-}
+  .navBar input {
+    width: 80px;
+    height: 20px;
+  }
 
-.ud--buttons{
-  margin-left: 50px;
-  display: flex;
-  flex-direction: row;
-  column-gap: 10px;
-}
+  th,
+  td {
+    font-size: 3vw;
+  }
+
+  .ud--buttons {
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
 
 
-.searchedCards{
- 
-  width: 80%;
+  .searchedCards {
+
+    width: 80%;
 
   }
 
-  .Card h1{
+  .Card h1 {
     font-size: 5vw;
-    }
+  }
 
-  
-    .searchedCards img{
-      width: 50px;
-      margin-left: auto;
-      }
+
+  .searchedCards img {
+    width: 50px;
+    margin-left: auto;
+  }
+
+  .editForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    row-gap: 30px;
+    background-color: whitesmoke;
+    width: 90%;
+    height: 80vh;
+  }
 }
-
